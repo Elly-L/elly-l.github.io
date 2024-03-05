@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mashallah Dee or Diana</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      /* Changed background color to aqua using both color name and hex value */
+      background: aqua; /* aqua or #00ffff */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .quotes h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .quotes p {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .navigation a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+      background-color: #f80080;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Fun</a>
+    </nav>
+
+    <div class="quotes">
+      <h1>Mashallah <span style="color: #f80080;">Princess Dee Herself</span></h1>
+      <p id="quote">Your beauty shines brighter than any jewel, <span style="color: #f80080;"></span>.</p>
+      <button onclick="changeQuote()">Press Me</button>
+    </div>
+  </div>
+  <script>
+    const quotes = [
+      "Your beauty shines brighter than any jewel, <span style='color: #f80080;'>Dee</span>.",
+      "Your eyes hold the depth of a thousand starry nights, <span style='color: #f80080;'>Diana</span>.",
+      "A single smile from you could light up the entire world, <span style='color: #f80080;'>Wandia</span>.",
+      "You are the embodiment of grace and elegance, <span style='color: #f80080;'>Princess</span>.",
+      "My heart beats only for you, <span style='color: #f80080;'>Bestie</span>.",
+      "You are a vision of perfection, <span style='color: #f80080;'>Diana</span>.",
+      "You are more beautiful than words can express, <span style='color: #f80080;'></span>."
+    ];
+
+    let currentQuote = 0;
+
+    function changeQuote() {
+      document.getElementById("quote").innerHTML = quotes[currentQuote];
+      currentQuote = (currentQuote + 1) % quotes.length;
+    }
+  </script>
+</body>
+</html>
